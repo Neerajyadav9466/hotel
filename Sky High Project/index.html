@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky High Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        .hero-section {
+            background: url('/images/beach.png') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: background-image 1s ease-in-out;
+        }
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        .room-section, .banquet-section {
+            padding: 4rem 2rem;
+        }
+        .room-card img, .banquet-card img {
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .room-card img:hover, .banquet-card img:hover {
+            transform: scale(1.05);
+        }
+        .price-tag {
+            font-size: 1.2rem;
+            color: #28a745;
+            font-weight: bold;
+        }
+        footer {
+            background-color:rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 2rem 0;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #00aaff;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #00aaff;
+        }
+        .navbar {
+            background:transparent;
+            padding: 0.5rem;
+            
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .navbar-nav .nav-link {
+            color:black;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #00aaff;
+        }
+        .btn-primary {
+            background-color: #ffffff;
+            color: #4b79a1;
+            border: none;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            background-color: #4b79a1;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="/images/logo.png" alt="Sky High Hotel Logo">
+            Sky High Hotel
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin_login.html">Admin Login</a>
+            </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="book.html">Book Now</a>
+               
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="hero-section" id="home">
+    <div>
+        <h1>Welcome to Sky High Hotel</h1>
+        <p>Experience luxury and comfort at its best.</p>
+        <a class="btn btn-primary btn-lg" href="book.html">Book Your Stay</a>
+    </div>
+</div>
+<section class="room-section bg-light" id="rooms">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Rooms</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card room-card">
+                    <a href="acrooms.html">
+                        <img src="/images/acroom2.png" class="card-img-top" alt="AC Room">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">AC Rooms</h5>
+                        <p class="card-text">Fully air-conditioned rooms with modern amenities.</p>
+                        <p class="price-tag">RS2000 per night</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card room-card">
+                    <a href="nonacrooms.html">
+                        <img src="/images/acroom1.png" class="card-img-top" alt="Non-AC Room">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Non-AC Rooms</h5>
+                        <p class="card-text">Cozy and affordable rooms with all basic facilities.</p>
+                        <p class="price-tag">RS1280 per night</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="banquet-section" id="banquet">
+    <div class="container">
+        <h2 class="text-center mb-4">Banquet Hall</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card banquet-card">
+                    <a href="banquteehall.html">
+                        <img src="/images/banq1.png" class="card-img-top" alt="Banquet Hall">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Banquet Hall</h5>
+                        <p class="card-text">A spacious and well-equipped hall for weddings, conferences, and events.</p>
+                        <p class="price-tag">Starting at Rs 150000 per event</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Gallery</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="/images/acroom2.png" class="img-fluid" alt="Hotel Image 1">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="/images/banq1.png" class="img-fluid" alt="Hotel Image 2">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="/images/hotleinside.png" class="img-fluid" alt="Hotel Image 3">
+                </div>
+            </div>
+            <!-- Add more images as needed -->
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="/images/ac3.png" class="img-fluid" alt="Hotel Image 2">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="/images/IMG_99736.png" class="img-fluid" alt="Hotel Image 2">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="/images/non ac room1.png" class="img-fluid" alt="Hotel Image 2">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="/images/non ac room1.png" class="img-fluid" alt="Hotel Image 2">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="/images/non ac room1.png" class="img-fluid" alt="Hotel Image 2">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="/images/non ac room1.png" class="img-fluid" alt="Hotel Image 2">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="gallery-item">
+                    <img src="/images/non ac room1.png" class="img-fluid" alt="Hotel Image 2">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <!-- Our Facilities -->
+            <div class="col-md-3">
+                <h5 class="text-uppercase">Our Facilities</h5>
+                <ul class="list-unstyled">
+                    <li>✔ AC & Non-AC Rooms</li>
+                    <li>✔ Banquet Hall</li>
+                    <li>✔ Free WiFi</li>
+                    <li>✔ 24x7 Customer Support</li>
+                </ul>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="col-md-3">
+                <h5 class="text-uppercase">Contact Us</h5>
+                <p>📍 Village Nawdi, Tehsil Ateli,<br> District Mahendergarh, Haryana - 123021</p>
+                <p>📞 Contact: <a href="tel:+918307232177" class="text-light">8307232177</a></p>
+                <p>📧 Email: <a href="mailto:neerajrao1114@gmail.com" class="text-light">neerajrao1114@gmail.com</a></p>
+                <p>📱 WhatsApp: <a href="https://wa.me/918307232177" class="text-light">8307232177</a></p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-3">
+                <h5 class="text-uppercase">Follow Us</h5>
+                <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://wa.me/918307232177" class="text-light"><i class="fab fa-whatsapp fa-2x"></i></a>
+            </div>
+
+            <!-- Google Map -->
+            <div class="col-md-3">
+                <h5 class="text-uppercase">Our Location</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19915.927562816643!2d76.32666040644393!3d28.065060048466126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3912ad00f56ef4df%3A0x6e0bddb5c57aa4b!2z4KSo4KS14KWN4KSm4KWALCDgpLngpLDgpL_gpK_gpL7gpKPgpL4!5e0!3m2!1shi!2sin!4v1737993225761!5m2!1shi!2sin" width="300" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+            </div>
+        </div>
+
+        <!-- Customer Reviews -->
+        <div class="mt-4">
+            <h5 class="text-uppercase text-center">Customer Reviews</h5>
+            <div id="reviews" class="text-center"></div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+    // Sample customer reviews
+    const reviews = [
+        "Great service and comfortable stay!", 
+        "Loved the banquet hall, perfect for events!", 
+        "Amazing hospitality and fast WiFi!", 
+        "24x7 support made our stay hassle-free!"
+    ];
+
+    function displayReviews() {
+        let index = 0;
+        setInterval(() => {
+            $('#reviews').fadeOut(500, function() {
+                $(this).text(reviews[index]).fadeIn(500);
+            });
+            index = (index + 1) % reviews.length;
+        }, 3000);
+    }
+    
+    $(document).ready(function() {
+        displayReviews();
+    });
+</script>
+
+<style>
+    footer {
+        background: linear-gradient(135deg, #1e1e1e, #343a40);
+    }
+    i {
+        transition: transform 0.3s ease-in-out;
+    }
+    i:hover {
+        transform: scale(1.2);
+    }
+</style>
+
+<script>
+    const heroImages = [
+        '/images/beach.png',
+        '/images/acroom1.png',
+        '/images/acroom2.png',
+        '/images/banq1.png',
+        '/images/beachin.png'
+    ];
+    let currentIndex = 0;
+    function changeHeroBackground() {
+        const heroSection = document.querySelector('.hero-section');
+        heroSection.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
+        currentIndex = (currentIndex + 1) % heroImages.length;
+    }
+    setInterval(changeHeroBackground, 5000);
+    changeHeroBackground();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

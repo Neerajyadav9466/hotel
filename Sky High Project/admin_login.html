@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-20">
+        <div class="max-w-md mx-auto bg-white p-8 border border-gray-300 rounded-lg">
+            <h2 class="text-2xl font-bold mb-6 text-center">Admin Login</h2>
+            <form id="admin-login-form" method="POST" action="admin_login.php">
+                <div class="mb-4">
+                    <label for="admin_id" class="block text-gray-700">Admin ID</label>
+                    <input type="text" id="admin_id" name="admin_id" class="w-full p-2 border border-gray-300 rounded mt-2" required>
+                </div>
+                <div class="mb-4">
+                    <label for="admin_password" class="block text-gray-700">Password</label>
+                    <input type="password" id="admin_password" name="admin_password" class="w-full p-2 border border-gray-300 rounded mt-2" required>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
